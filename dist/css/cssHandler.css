@@ -1,0 +1,518 @@
+/* Autodealers.nl CSS voor de dealerwebsite */
+@import url('//svl.autodealers.nl/css/responsive2/bootstrap.min.css');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url('//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css');
+@import url('//svl.autodealers.nl//css/responsive2/style.min.css');
+/*
+	Style.css
+	Table of Contents:
+
+	- Custom Class Library
+	- Global
+	- Theme
+		+ Header
+		+ Menu
+		+ Carousel
+		+ Occasion Slideshow
+		+ Footer
+	- Custom
+		+ Global
+		+ Pages
+		+ Mediaqueries
+*/
+
+
+.bb-1 { border-bottom: 1px solid #637578; }
+
+/*********************
+****** GLOBAL ********
+*********************/
+marquee.melding{
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+html, body {
+	background: gray;
+}
+
+div#body {
+    background: gray;
+}
+
+div#body .container {
+    background: #fff;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #637578;
+  font-size:16px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  padding: 0;
+  margin-top: 0;
+  color: #000;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+h2 {
+  font-size: 21px;
+  margin-bottom: 22px;
+}
+h3 {
+  font-size: 18px;
+}
+p {
+  line-height: 22px;
+  margin: 0 0 22px 0;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #637578;
+  text-decoration: none;
+}
+
+.bg-primary {
+	background: #787d81;
+}
+
+/*********************
+******* THEME ********
+*********************/
+
+/*************
+*** Header ***
+*************/
+
+
+/*****************
+*** Navigation ***
+*****************/
+
+/*
+Primary background: 	#ff9600
+Dropdown background:	#fd9c12 
+text color:				#fff
+*/
+
+/* Setup */
+.navbar {
+  z-index: 99;
+}
+.navbar-default {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  z-index: 999;
+  min-height: 0;
+}
+/* Menu Link */
+.navbar-default .navbar-nav > li > a {
+  color: #000;
+  text-align: center;
+  border-left: 1px solid #494949;
+  padding:0;
+  font-size:17px;
+  font-weight:500;
+}
+
+.navbar-default .navbar-nav > li:first-child > a {
+  border-left: 0px solid #494949;
+}
+/* Menu Link Hover & Active*/
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:focus, 
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: transparent;
+  color: #000;
+  font-weight:800;
+}
+/* Menu icon*/
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+  background-color:  transparent;
+}
+.navbar-default .navbar-toggle {
+  border-color: #fff;
+}
+@media (max-width: 767px) {	
+  /* Setup */
+  body { padding-top: 50px }
+  .navbar-xs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  /* Background */
+  .navbar-default .navbar-header {
+    background: #637578;
+  }
+  /* Brand */
+  .navbar-default .navbar-brand,
+  .navbar-default .navbar-brand:hover {
+    color: #fff;
+  }
+  /* Collapse */
+  .navbar-default .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #637578;
+  }
+  .navbar-default .navbar-collapse {
+    border: none;
+    color: #fff;
+  }
+  /* Menu Link */
+  .navbar-default .navbar-nav > li > a {
+    border: none;
+    color:#fff;
+    padding:10px 0; 
+  }
+  /* Dropdown */
+  .navbar-nav .open .dropdown-menu {
+    padding: 0;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    background: #637578;
+    color: #fff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, 
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+    color: #fff;
+  }
+  /* Menu links */
+  .navbar-default .navbar-nav > li a {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+.navbar-default {
+    margin-bottom: 40px;
+}
+  /* Setup */
+  .navbar-nav {
+    width: 100%;
+    display: table;
+  }
+  .navbar-nav > li {
+    float: none;
+    display: table-cell;
+  }
+  nav .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  nav .container-fluid { 
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/***************
+*** Carousel ***
+***************/
+
+/* Carousel height */
+#carousel-header {
+  height: 180px;
+}
+@media (min-width: 768px) {
+  #carousel-header {
+    height: 294px;
+  }
+}
+@media (min-width: 992px) {
+  #carousel-header {
+    height: 394px;
+  }
+}
+@media (min-width: 1200px) {
+  #carousel-header {
+    height: 394px;
+  }
+}
+
+/* Setup */
+#carousel-header .carousel-indicators {
+  z-index: 5;
+  display: none;
+}
+#carousel-header .carousel-inner,
+#carousel-header .carousel .item,
+#carousel-header .carousel-inner .bg {
+  height: 100%;
+}
+
+#carousel-header .carousel-inner .bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Carousel backgrounds */
+#carousel-header .carousel-inner .bg1 {
+  background-image: url('//svl.autodealers.nl/upload/1893_resp_header.jpg');
+  background-position: center center;
+}
+#carousel-header .carousel-inner .bg2 {
+  background-image: url(images/slide2.jpg);
+  background-position: center center;
+}
+#carousel-header .carousel-inner .bg3 {
+  background-image: url(images/slide3.jpg);
+  background-position: center center;
+}
+
+/* Carousel fade effect */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/*************************
+*** Occasion Slideshow ***
+*************************/
+ul#scroller > li > div > a, ul#scroller > li > div > h3 {
+    color: #fff;
+}
+
+ul#scroller li span {
+    display: block;
+    max-width: 320px;
+    overflow: hidden;
+    height: 20px;
+}
+
+/*************
+*** Footer ***
+*************/
+#footer {
+  position: relative;
+  height: auto;
+}
+
+#footer .footer-copyright {
+	border-top: 1px solid #637578;
+}
+
+@media (min-width: 767px) {
+  body {
+    margin-bottom: 0; /* Margin bottom by footer height */
+  }
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  #footer {
+    position: relative;
+  }
+  #footer p {
+    margin: 0;
+    line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  #footer p {
+    line-height: 22px;
+  }
+}
+
+/*************
+*** CUSTOM ***
+*************/
+
+.block {
+    border: 1px solid;
+    padding: 15px;
+}
+
+.dekra {
+    max-width: 130px;
+    width: 100%;
+}
+
+.logo-af {
+    max-width: 110px;
+    width: 100%;
+}
+
+ul.nav-blok {
+    padding-left: 0px;
+    list-style: none;
+}
+
+ul.nav-blok li a {
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.banner-tekst {
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    width: 20%;
+}
+
+.banner-tekst span {
+    display: block;
+}
+
+span.banner-titel {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+/*************
+*** Global ***
+*************/
+
+/* Bootstrap */
+a.btn-default {
+  color: #000;
+}
+
+/* Others */
+.full-width {
+	width: 100%;
+}
+
+.btn-primary, 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open>.dropdown-toggle.btn-primary {
+    background: #000;
+    border: #000;
+}
+
+
+/*************
+**** Home ****
+*************/
+.logos-aangesloten {
+	max-width: 293px;
+}
+.logos-aangesloten img {
+	height: 55px;
+}
+@media(max-width:991px) {
+	.logos-aangesloten img {
+		height: 45px;
+	}
+}
+
+/****************
+*** Occasions ***
+****************/
+
+/* Base colors*/
+#body.autolijst_background a.btn-primary,
+#body.autolijst_background a.btn-social,
+#body.detail-view .label-primary {
+	color: #fff;
+}
+#body.autolijst_background .well,
+#body.autolijst_background .list-group,
+#body.detail-view h3[itemprop="name"],
+#body.detail-view p[itemprop="address"],
+#body.detail-view span[itemprop="telephone"],
+#body.detail-view .row.nav-bar {
+  color: #000;
+}
+
+/* Secondary colors */
+#body.autolijst_background ul.pagination a,
+#body.autolijst_background .title,
+#body.detail-view .bg-info {
+	color: #000;
+}
+#body.autolijst_background .pagination > .active > a,
+#body.autolijst_background a.btn-primary {
+	background: #000;
+	border: 1px solid #000;
+	color: #fff;
+}
+
+
+/**********************
+*** Route & Contact ***
+**********************/
+
+#body.Contact #map {
+  height: 400px;
+}
+#body.Contact #route {
+  background: #fff;
+}
+/* de routebeschgrijving op mobiel valt buiten het scherm zonder */
+#body.Contact .adp b, 
+#body.Contact .adp-list b {
+  display: inline-block; 
+}
+/* de prijs valt anders over de "bekijk deze auto" heen */
+#body.Contact .adp-directions, 
+#body.Contact .adp-summary 
+{
+  width:100%;
+}
